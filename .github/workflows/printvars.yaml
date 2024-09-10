@@ -1,0 +1,20 @@
+name: list vars
+on:
+  workflow_dispatch:      
+jobs:
+ test:
+   runs-on: ubuntu-latest
+   steps:
+    - name: checkout repo
+      uses: actions/checkout@v4
+
+    - name: print env vars
+      run: |
+        echo "terraform_state_bucket=stb" >> $GITHUB_ENV
+        echo "terraform_lock_table=tlt" >> $GITHUB_ENV
+      
+    - name: list all vars
+      run: echo "$ALLMYVARS"
+      shell: bash
+      env:
+        ALLMYVARS: ${{ toJSON(vars) }}
