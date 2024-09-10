@@ -14,7 +14,7 @@ jobs:
         echo "terraform_lock_table=tlt" >> $GITHUB_ENV
       
     - name: list all vars
-      run: echo "$ALLMYVARS"
+      run: env
       shell: bash
       env:
         ALLMYVARS: ${{ toJSON(vars) }}
