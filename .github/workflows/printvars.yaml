@@ -14,6 +14,9 @@ jobs:
       run: |
         echo "terraform_state_bucket=stb" >> $GITHUB_ENV
         echo "terraform_lock_table=tlt" >> $GITHUB_ENV
+
+    - name: print job env vars
+      uses: ./.github/actions
       
     - name: list all vars
       run: env
