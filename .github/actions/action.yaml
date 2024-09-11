@@ -10,4 +10,5 @@ runs:
      run: |
        chmod +x .github/scripts/test.sh
        ./.github/scripts/test.sh
+     shell: bash  
        
