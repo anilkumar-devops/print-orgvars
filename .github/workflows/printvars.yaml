@@ -18,8 +18,8 @@ jobs:
     - name: print job env vars
       uses: ./.github/actions
       
-    - name: list all vars
-      run: env
-      shell: bash
-      env:
-        ALLMYVARS: ${{ toJSON(vars) }}
+    # - name: list all vars
+    #   run: env
+    #   shell: bash
+    #   env:
+    #     ALLMYVARS: ${{ toJSON(vars) }}
