@@ -3,6 +3,8 @@ on:
   workflow_dispatch:      
 jobs:
  test:
+   env:
+     ALLMYVARS: ${{ toJSON(vars) }}
    runs-on: ubuntu-latest
    steps:
     - name: checkout repo
