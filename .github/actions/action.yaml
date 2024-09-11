@@ -1,0 +1,7 @@
+name: print env vars
+description: pritn env vars for testing
+runs:
+ using: composite
+ steps:
+   - name: print job level env vars
+     run: echo "${{ env.ALLMYVARS }}"
