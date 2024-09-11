@@ -6,3 +6,8 @@ runs:
    - name: print job level env vars
      run: echo "${{ env.ALLMYVARS }}"
      shell: bash
+   - name: run shell script
+     run: |
+       chmod +x .github/scripts/test.sh
+       ./.github/scripts/test.sh
+       
