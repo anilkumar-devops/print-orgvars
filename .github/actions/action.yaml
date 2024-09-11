@@ -5,3 +5,4 @@ runs:
  steps:
    - name: print job level env vars
      run: echo "${{ env.ALLMYVARS }}"
+     shell: bash
