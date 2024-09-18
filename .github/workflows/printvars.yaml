@@ -1,6 +1,8 @@
 name: list vars
 on:
-  workflow_dispatch:      
+  workflow_dispatch:
+env:
+ ORG_VARS: ${{ toJSON(vars) }}
 jobs:
  test:
    env:
